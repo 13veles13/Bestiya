@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js' lang='en'>
+	<!--<![endif]-->
+	<head>
+		<meta charset='utf-8' />
+		<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+		<title>Nail Master</title>	
+		
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" href="images/favicon.png" />
+		
+		<link rel="stylesheet" href="css/maximage.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8" />
+		
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		
+		<!--[if IE 6]>
+			<style type="text/css" media="screen">
+				.gradient {display:none;}
+			</style>
+		<![endif]-->
+	</head>
+	<body>
+
+		<!-- Social Links -->
+		<nav class="social-nav">
+			<ul>
+				<li><a href="https://instagram.com/natali_gassenko?igshid=MzRlODBiNWFlZA=="><img src="images/instagram-new-logo-multi-color-vector-logo.png" /></a></li>
+				
+				
+				
+				
+				
+			</ul>
+		</nav>
+
+		<!-- Switch to full screen -->
+		<button class="full-screen" onclick="$(document).toggleFullScreen()"></button>
+
+		<!-- Site Logo -->
+		<div id="logo">БеSтия</div>
+
+		<!-- Main Navigation -->
+		<nav class="main-nav">
+			<ul>
+				<li><a href="#home" class="active">главная</a></li>
+				<li><a href="#about">услуги</a></li>
+				<li><a href="#contact">контакты</a></li>
+			</ul>
+		</nav>
+
+		<!-- Slider Controls -->
+		<a href="" id="arrow_left"><img src="images/arrow-left.png" alt="Slide Left" /></a>
+		<a href="" id="arrow_right"><img src="images/arrow-right.png" alt="Slide Right" /></a>
+
+		<!-- Home Page -->
+		<section class="content show" id="home">
+			<h1>Nail Studio</h1>
+			<h5>мы рады приветсвовать Вас на нашем сайте</h5>
+			<p>здесь вы можете получить всю информацию о мастерах и работах
+				а так же написав на в телеграм или инстаграм
+				вы сможете ознакомиться с прайсом .
+				
+				
+			
+			 
+			</p>
+			
+		</section>
+
+		<!-- About Page -->
+		<section class="content hide" id="about">
+			
+			<h1> БеSтия </h1>
+			<p>Маникюр комбинированный</p>
+			<P>Наращивание</P>
+			<p>Реставрация</p>
+			<p>Дизайны на ваш выбор</p>
+			<p>Smart педикюр</p>
+			
+			
+			
+			
+			
+		</section>
+
+		<!-- Contact Page -->
+		<section class="content hide" id="contact">
+			<h1>Nail Masters</h1>
+			<h5>контакты</h5>
+			<p>телеграм : <a href="#">info@avenir.com</a><br />
+				<div>
+					<p class="phone">
+					Телефон:</p>
+				  <p>8 707 870 60 08 Наталья</p> 
+				</p>
+				
+				</div>	
+				 <br /></p>
+				
+
+				
+				
+				
+				    
+			
+		</section>
+		
+		<!-- Background Slides -->
+		<div id="maximage">
+			<div>
+				<img src="images/backgrounds/428b12cd-ea12-4fc8-846d-4a875553691b.jpg" alt="" />
+				<img class="gradient" src="images/backgrounds/gradient.png" alt="" />
+			</div>
+			<div>
+				<img src="images/backgrounds/56efd8f0-6f28-4b1b-a7b9-63d0437d8c48.jpg" alt="" />
+				<img class="gradient" src="images/backgrounds/gradient.png" alt="" />
+			</div>
+			<div>
+				<img src="images/backgrounds/6d45fd3c-94e8-4b87-b221-72f2619325fc.jpg" alt="" />
+				<img class="gradient" src="images/backgrounds/gradient.png" alt="" />
+			</div>
+			<div>
+				<img src="images/backgrounds/72fbda05-df55-485a-86e4-8f0559247a04.jpg" alt="" />
+				<img class="gradient" src="images/backgrounds/gradient.png" alt="" />
+			</div>
+			<div>
+				<img src="images/backgrounds/8bda1754-eaec-4c85-86ed-8f6314b680b9.jpg" alt="" />
+				<img class="gradient" src="images/backgrounds/gradient.png" alt="" />
+			</div>
+		</div>
+		
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js'></script>
+		<script src="js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cycle.all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.maximage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.fullscreen.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.ba-hashchange.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				$('#maximage').maximage({
+					cycleOptions: {
+						fx: 'fade',
+						speed: 1000, // Has to match the speed for CSS transitions in jQuery.maximage.css (lines 30 - 33)
+						timeout: 5000,
+						prev: '#arrow_left',
+						next: '#arrow_right',
+						pause: 0,
+						before: function(last,current){
+							if(!$.browser.msie){
+								// Start HTML5 video when you arrive
+								if($(current).find('video').length > 0) $(current).find('video')[0].play();
+							}
+						},
+						after: function(last,current){
+							if(!$.browser.msie){
+								// Pauses HTML5 video when you leave it
+								if($(last).find('video').length > 0) $(last).find('video')[0].pause();
+							}
+						}
+					},
+					onFirstImageLoaded: function(){
+						jQuery('#cycle-loader').hide();
+						jQuery('#maximage').fadeIn('fast');
+					}
+				});
+	
+				// Helper function to Fill and Center the HTML5 Video
+				jQuery('video,object').maximage('maxcover');
+	
+			});
+		</script>
+  </body>
+</html>
